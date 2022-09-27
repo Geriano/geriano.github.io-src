@@ -28,20 +28,27 @@ const exprs = {
     <div class="flex flex-col space-y-2 mt-10">
       <template v-for="(year, i) in Object.keys(exprs).sort().reverse()" :key="i">
         <div class="grid gap-6 grid-cols-12 pb-5">
-          <div class="col-span-1">
-            <div class="rounded-full border-4 border-blue-600 mx-auto" :class="{
-              'w-4 h-4': year < Math.max(...Object.keys(exprs)),
-              'w-6 h-6': year == Math.max(...Object.keys(exprs)),
-            }"></div>
+          <div class="col-span-2 md:col-span-1 relative">
+            <div class="absolute top-0 w-full h-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-105">
+              <div
+                class="rounded-full border-blue-600 mx-auto bg-gray-900"
+                :class="{
+                  'border-8': year < Math.max(...Object.keys(exprs)),
+                  'w-6 h-6 border-4': year == Math.max(...Object.keys(exprs)),
+                }"
+              />
+            </div>
+
+            <div class="border-2 w-full absolute rotate-90" :class="{ 'border-blue-600 -bottom-[25%]': i == 0, 'border-blue-600 bottom-[50%]': i > 0 }" />
           </div>
     
-          <p class="col-span-1 font-semibold">
+          <p class="col-span-2 md:col-span-1 font-semibold flex items-center justify-center">
             {{ year }}
           </p>
     
           <div class="col-span-full md:col-span-10 flex flex-col space-y-4 w-full">
             <template v-for="(work, j) in exprs[year]" :key="j">
-              <div class="flex flex-col space-y-2">
+              <div class="flex flex-col space-y-2 mt-4 md:mt-0">
                 <h1 class="text-xl">{{ work.at }} as <span class="font-semibold">{{ work.as }}</span></h1>
                 <p>{{ work.desc }}</p>
               </div>

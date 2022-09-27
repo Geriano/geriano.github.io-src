@@ -12,7 +12,7 @@ import me from './assets/images/me.jpeg'
       </div>
 
       <div class="md:w-1/3 bg-gradient-to-tr from-gray-700 to-gray-800 border bg-opacity-80 backdrop-blur border-gray-700 rounded-md shadow">
-        <div class="bg-gray-800 rounded-t-md px-4 py-2 shadow flex items-center justify-end space-x-2">
+        <div class="bg-gradient-to-tr from-gray-800 to-gray-900 rounded-t-md px-4 py-2 shadow flex items-center justify-end space-x-2">
           <div class="rounded-full p-2 bg-green-500"></div>
           <div class="rounded-full p-2 bg-yellow-400"></div>
           <div class="rounded-full p-2 bg-red-500"></div>

@@ -182,7 +182,7 @@ onMounted(calculate)
   <section id="skill">
     <h1 class="text-4xl font-semibold capitalize">skill</h1>
 
-    <Carousel :itemsToShow="show" :autoplay="3000" :wrapAround="true" class="p-0">
+    <Carousel :itemsToShow="show" :wrapAround="true" class="p-0">
       <Slide v-for="(skill, i) in skills" :key="i">
         <div class="flex flex-col space-y-4 px-2 pt-2 pb-4 rounded-md bg-black bg-opacity-20 backdrop-blur transition-all hover:scale-[1.03]">
           <img :src="skill.image" :alt="skill.name" class="object-cover w-[17.5rem] h-[15rem] rounded-md">
@@ -200,3 +200,13 @@ onMounted(calculate)
     </Carousel>
   </section>
 </template>
+
+<style>
+.carousel__prev, .carousel__next, .carousel__pagination-button {
+  @apply text-white bg-blue-600 bg-opacity-40 backdrop-blur;
+}
+
+.carousel__pagination-button--active {
+  @apply bg-opacity-100;
+}
+</style>
