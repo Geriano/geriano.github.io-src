@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, ref } from 'vue';
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
@@ -160,13 +161,28 @@ const skills = [
     image: flutter,
   },
 ]
+
+const show = ref(3)
+
+const calculate = () => {
+  if (window.innerWidth < 512) {
+    show.value = 1
+  } else if (window.innerWidth < 768) {
+    show.value = 2
+  } else {
+    show.value = 3.5
+  }
+}
+
+window.addEventListener('resize', calculate)
+onMounted(calculate)
 </script>
 
 <template>
   <section id="skill">
     <h1 class="text-4xl font-semibold capitalize">skill</h1>
 
-    <Carousel :items-to-show="3" :autoplay="3000" :wrapAround="true" class="p-0">
+    <Carousel :itemsToShow="show" :autoplay="3000" :wrapAround="true" class="p-0">
       <Slide v-for="(skill, i) in skills" :key="i">
         <div class="flex flex-col space-y-4 px-2 pt-2 pb-4 rounded-md bg-black bg-opacity-20 backdrop-blur transition-all hover:scale-[1.03]">
           <img :src="skill.image" :alt="skill.name" class="object-cover w-[17.5rem] h-[15rem] rounded-md">
