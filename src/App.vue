@@ -1,8 +1,9 @@
 <script setup>
+  import { nextTick, ref, watch } from 'vue'
 import Home from './Home.vue'
 import Skill from './Skill.vue'
 import Experience from './Experience.vue'
-import { ref, watch } from 'vue'
+import Project from './Project.vue'
 
 const to = e => {
   const hash = e.target.getAttribute('href').substring(1)
@@ -10,10 +11,12 @@ const to = e => {
 
   if (target) {
     window.scrollTo({
-      top: target.offsetTop,
+      top: target.offsetTop - (hash === 'experience' ? 70 : 30),
       behavior: 'smooth',
     })
   }
+
+  nextTick(() => setTimeout(() => open.value = window.innerWidth < 768 ? false : true, 500))
 }
 
 const home = () => window.scrollTo({
@@ -66,5 +69,6 @@ window.addEventListener('resize', () => open.value = window.innerWidth > 768)
     <Home />
     <Skill />
     <Experience />
+    <Project />
   </main>
 </template>
