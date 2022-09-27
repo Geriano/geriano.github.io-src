@@ -1,31 +1,31 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './Home.vue'
+import Skill from './Skill.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <div class="sticky top-0 left-0 bg-gray-800 bg-opacity-70 backdrop-blur h-16 flex items-center justify-between px-4 md:px-8 z-10">
+    <h1 class="text-4xl font-black capitalize">
+      geriano
+    </h1>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <div class="flex items-center justify-around md:w-1/3">
+      <a href="#about" class="font-semibold capitalize">
+        skill
+      </a>
+
+      <a href="#experience" class="font-semibold capitalize">
+        experience
+      </a>
+
+      <a href="#project" class="font-semibold capitalize">
+        project
+      </a>
+    </div>
+  </div>
+
+  <main class="px-6 md:px-20 pb-10">
+    <Home />
+    <Skill />
+  </main>
+</template>
