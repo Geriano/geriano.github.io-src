@@ -4,27 +4,27 @@ import me from './assets/images/me.jpeg'
 
 <template>
   <section id="home" class="items-center space-y-20">
-    <div class="flex items-center justify-center space-x-10">
+    <div class="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-10">
       <div class="md:w-1/3">
         <h1 class="text-6xl font-black">Hello there, my name is Geriano</h1>
         <hr class="my-4">
         <p class="text-4xl font-semibold">I'm fullstack developer from indonesian</p>
       </div>
 
-      <div class="md:w-1/3 bg-gradient-to-tr from-gray-700 to-gray-800 border bg-opacity-80 backdrop-blur border-gray-700 rounded-md shadow">
+      <div class="w-full md:w-1/3 bg-gradient-to-tr from-gray-700 to-gray-800 border bg-opacity-80 backdrop-blur border-gray-700 rounded-md shadow">
         <div class="bg-gradient-to-tr from-gray-800 to-gray-900 rounded-t-md px-4 py-2 shadow flex items-center justify-end space-x-2">
           <div class="rounded-full p-2 bg-green-500"></div>
           <div class="rounded-full p-2 bg-yellow-400"></div>
           <div class="rounded-full p-2 bg-red-500"></div>
         </div>
 
-        <div class="flex flex-col items-center space-y-8 p-8">
+        <div class="flex flex-col items-center p-8">
           <img alt="Geriano" :src="me" class="rounded-full w-[10rem] h-[10rem]">
         </div>
       </div>
     </div>
 
-    <div class="flex items-center justify-evenly space-x-20 bg-black bg-opacity-20 backdrop-blur px-20 py-10 rounded-md w-full">
+    <div class="flex items-center justify-evenly bg-black bg-opacity-20 backdrop-blur md:px-20 py-10 rounded-md w-full">
       <a href="https://linkedin.com/in/gerznewbie" target="_blank" title="LinkedIn" class="w-12 h-12 text-gray-300 rounded p-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
           <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>

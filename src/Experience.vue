@@ -8,6 +8,13 @@ const exprs = {
       desc: 'Developing user interface on every project',
       stack: ['NodeJs', 'React', 'Vue'],
     },
+
+    {
+      at: 'PT Kimia Farma',
+      as: 'Fullstack Developer',
+      desc: 'Still developing new app and upgrading to new tech',
+      stack: ['NodeJs', 'AdonisJs', 'Websocket', 'PHP', 'Laravel', 'CodeIgniter', 'Vue', 'JQuery', 'Bootstrap', 'Tailwind'],
+    },
   ],
 
   2021: [
