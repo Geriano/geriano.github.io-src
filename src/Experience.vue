@@ -46,21 +46,21 @@ const exprs = {
               />
             </div>
 
-            <div class="border-2 w-full absolute rotate-90" :class="{ 'border-blue-600 -bottom-[25%]': i == 0, 'border-blue-600 bottom-[50%]': i > 0 }" />
+            <div class="border-2 border-blue-600 h-full w-1 absolute left-[50%] right-[50%] -translate-x-[50%] transform" :class="{'translate-y-[50%]': i === 0}" />
           </div>
     
           <p class="col-span-2 md:col-span-1 font-semibold flex items-center justify-center">
             {{ year }}
           </p>
     
-          <div class="col-span-full md:col-span-10 flex flex-col space-y-4 w-full">
+          <ul class="col-span-full md:col-span-10 flex flex-col space-y-4 w-full list-disc">
             <template v-for="(work, j) in exprs[year]" :key="j">
-              <div class="flex flex-col space-y-2 mt-4 md:mt-0">
+              <li class="mt-4 md:mt-0">
                 <h1 class="text-xl">{{ work.at }} as <span class="font-semibold">{{ work.as }}</span></h1>
                 <p>{{ work.desc }}</p>
-              </div>
+              </li>
             </template>
-          </div>
+          </ul>
         </div>
       </template>
     </div>
