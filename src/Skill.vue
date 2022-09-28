@@ -165,13 +165,17 @@ const skills = [
 const show = ref(3)
 
 const calculate = () => {
-  if (window.innerWidth < 512) {
-    show.value = 1
-  } else if (window.innerWidth < 768) {
-    show.value = 2
-  } else {
-    show.value = 3.5
-  }
+  const width = window.innerWidth
+  const max = 1366
+  const per = (width / max * 3)
+  const s = per.toFixed(2)
+  const e = Math.floor(parseFloat(s.split('.').reverse().shift().split('').join('.')))
+  let res = parseFloat(`${s}.${e}`)
+  res = res < 3 ? res - 0.1 : res
+  res = res < 1 ? 1 : res
+  res = parseFloat(res.toFixed(2))
+  
+  show.value = res
 }
 
 window.addEventListener('resize', calculate)
@@ -195,7 +199,10 @@ onMounted(calculate)
 
       <template #addons>
         <Navigation />
-        <Pagination />
+
+        <div class="overflow-hidden">
+          <Pagination />
+        </div>
       </template>
     </Carousel>
   </section>

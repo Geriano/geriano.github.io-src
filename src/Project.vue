@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
@@ -70,20 +70,25 @@ const projects = [
   },
 ]
 
-const show = ref(3)
+const show = ref(2)
 
 const calculate = () => {
-  if (window.innerWidth < 512) {
-    show.value = 1
-  } else if (window.innerWidth < 768) {
-    show.value = 2
-  } else {
-    show.value = 3.5
-  }
+  const width = window.innerWidth
+  const max = 1366
+  const per = (width / max * 2)
+  const s = per.toFixed(2)
+  const e = Math.floor(parseFloat(s.split('.').reverse().shift().split('').join('.')))
+  let res = parseFloat(`${s}.${e}`)
+  res = res < 2 ? res - 0.1 : res
+  res = res < 1 ? 1 : res
+  res = parseFloat(res.toFixed(2))
+  
+  show.value = res
 }
 
 window.addEventListener('resize', calculate)
 onMounted(calculate)
+onUnmounted(() => window.removeEventListener('resize', calculate))
 </script>
 
 <template>
@@ -92,25 +97,32 @@ onMounted(calculate)
 
     <Carousel :itemsToShow="show" :wrapAround="true" class="p-0">
       <Slide v-for="(project, i) in projects" :key="i">
-        <div class="flex flex-col items-center space-y-4 px-2 pt-2 pb-4 rounded-md bg-black bg-opacity-20 backdrop-blur transition-all hover:scale-[1.03] h-full">
+        <div
+          class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 px-2 pt-2 pb-4 rounded-md bg-black bg-opacity-20 backdrop-blur transition-all hover:scale-[1.03] h-full"
+        >
           <img :src="project.image" :alt="project.name" class="object-cover w-[17.5rem] h-[15rem] rounded-md cursor-pointer">
 
-          <div class="flex flex-col space-y-2 w-[17.5rem]">
-            <h1 class="font-semibold">{{ project.name }}</h1>
-            <p>{{ project.desc }}</p>
-          </div>
-
-          <div class="flex-wrap w-[17.5rem]">
-            <button v-for="(stack, j) in project.tech" :key="j" type="button" class="bg-gray-800 hover:bg-gradient-to-tr from-gray-800 to-gray-900 bg-opacity-20 backdrop-blur px-2 py-1 rounded-md m-[2px] transition-all duration-300">
-              <p class="font-semibold text-sm">{{ stack }}</p>
-            </button>
+          <div class="flex flex-col space-y-4">
+            <div class="flex flex-col space-y-2 w-[17.5rem]">
+              <h1 class="font-semibold">{{ project.name }}</h1>
+              <p>{{ project.desc }}</p>
+            </div>
+  
+            <div class="flex-wrap w-[17.5rem]">
+              <button v-for="(stack, j) in project.tech" :key="j" type="button" class="bg-gray-800 hover:bg-gradient-to-tr from-gray-800 to-gray-900 bg-opacity-20 backdrop-blur px-2 py-1 rounded-md m-[2px] transition-all duration-300">
+                <p class="font-semibold text-sm">{{ stack }}</p>
+              </button>
+            </div>
           </div>
         </div>
       </Slide>
 
       <template #addons>
         <Navigation />
-        <Pagination />
+
+        <div class="overflow-hidden">
+          <Pagination />
+        </div>
       </template>
     </Carousel>
   </section>
