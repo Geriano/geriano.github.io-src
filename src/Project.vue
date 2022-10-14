@@ -11,6 +11,9 @@ import thread from './assets/images/thread.png'
 import boilerplate from './assets/images/boilerplate.png'
 import swakop from './assets/images/swakop.png'
 import novagrafis from './assets/images/novagrafis.png'
+import jaddi from './assets/images/jaddi.png'
+import hira from './assets/images/hira.png'
+import lodger from './assets/images/lodger.png'
 
 const projects = [
   {
@@ -67,6 +70,27 @@ const projects = [
     image: novagrafis,
     desc: 'Developing frontend for nft like app',
     tech: ['Vue', 'Bootstrap'],
+  },
+
+  {
+    name: 'Jaddi',
+    image: jaddi,
+    desc: 'Create company profile',
+    tech: ['Bootstrap', 'JQuery'],
+  },
+
+  {
+    name: 'Hira',
+    image: hira,
+    desc: 'Create backend for photograph portofolio',
+    tech: ['PHP', 'Apache', 'MySQL', 'CodeIgniter 4', 'Illuminate Database'],
+  },
+
+  {
+    name: 'Lodger',
+    image: lodger,
+    desc: 'Improving progress tracker app',
+    tech: ['PHP', 'CodeIgniter 4', 'MySQL', 'Bootstrap', 'JQuery'],
   },
 ]
 

@@ -1,7 +1,13 @@
 <script setup>
-//
 const exprs = {
   2022: [
+    {
+      at: 'PT Laju Omega Digital',
+      as: 'Fullstack Developer',
+      desc: 'Developing any website base on client request',
+      stack: ['NodeJs', 'Adonis', 'React', 'Vue', 'PHP', 'Laravel', 'CodeIgniter'],
+    },
+
     {
       at: 'PT Quadra Karya Santosa',
       as: 'Frontend Developer',
