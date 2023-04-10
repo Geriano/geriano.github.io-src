@@ -99,7 +99,7 @@ export default function App() {
   return (
     <>
       <header className="flex flex-col">
-        <div className="flex items-center justify-between bg-slate-700 px-20 print:px-6 py-6 print:py-2">
+        <div className="flex flex-col md:flex-row items-center md:justify-between bg-slate-700 px-10 md:px-20 print:px-6 py-6 print:py-2">
           <div className="flex flex-col space-y-2">
             <h1 className="text-white text-5xl font-semibold">Geriano Adika Putra</h1>
             <h3 className="text-cyan-500 text-xl font-medium">Product Owner, Fullstack Web & Mobile Developer</h3>
@@ -111,8 +111,8 @@ export default function App() {
           </div>
         </div>
 
-        <div className="flex flex-col bg-slate-800 text-white font-medium px-20 print:px-2 py-4 rounded-b-md">
-          <div className="flex items-center justify-evenly space-x-2">
+        <div className="flex flex-col bg-slate-800 text-white font-medium px-6 md:px-20 print:px-2 py-4 rounded-b-md">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:items-center md:justify-evenly md:space-x-2">
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4">
                 <MailIcon />
@@ -141,7 +141,7 @@ export default function App() {
         </div>
       </header>
 
-      <div className="grid gap-4 grid-cols-2 px-20 py-10 print:px-10 print:py-4">
+      <div className="grid gap-4 md:grid-cols-2 px-10 md:px-20 py-10 print:px-10 print:py-4">
         <div className='flex flex-col space-y-4'>
           <h3 className="text-3xl text-cyan-500 underline underline-offset-8 font-medium">Work Experience</h3>
 
