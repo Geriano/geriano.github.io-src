@@ -2,7 +2,7 @@ import BrowserIcon from './BrowserIcon'
 import GithubIcon from './GithubIcon'
 import LinkedinIcon from './Linkedin'
 import MailIcon from './MailIcon'
-import me from './assets/me.png'
+import me from './assets/me.webp'
 
 const experiences = [
   {
