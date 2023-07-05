@@ -153,7 +153,7 @@ export default function App() {
         <div className='flex flex-col space-y-4'>
           <h3 className="text-3xl text-cyan-500 underline underline-offset-8 font-medium">Work Experience</h3>
 
-          {experiences.toReversed().map(experience => (
+          {experiences.map(experience => (
             <div key={experience.org} className="flex flex-col space-y-2">
               <div className="flex flex-col space-y-1">
                 <h3 className="text-xl font-semibold">{experience.as}</h3>
