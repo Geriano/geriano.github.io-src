@@ -45,7 +45,7 @@ const experiences = [
   {
     as: 'Fullstack Web & Mobile developer',
     org: 'PT Laju Omega Digital',
-    range: '10/2022 - Present',
+    range: '10/2022 - 05/2023',
     tasks: [
       'develop company profile for jaddi, hira, jellifish, world health organization, indomina, anugrah teknologi indonesia, and more',
       'develop social media web app and leading to build mobile app',
@@ -57,6 +57,14 @@ const experiences = [
       'develop airfreight system',
       'develop hotel booking system',
       'develop internal project management system into mobile',
+    ],
+  },
+  {
+    as: 'Backend Developer',
+    org: 'Legit Group - Ismaya Group',
+    range: '05/2023 - Present',
+    tasks: [
+      'develop warehouse management system',
     ],
   },
 ]
@@ -145,7 +153,7 @@ export default function App() {
         <div className='flex flex-col space-y-4'>
           <h3 className="text-3xl text-cyan-500 underline underline-offset-8 font-medium">Work Experience</h3>
 
-          {experiences.map(experience => (
+          {experiences.toReversed().map(experience => (
             <div key={experience.org} className="flex flex-col space-y-2">
               <div className="flex flex-col space-y-1">
                 <h3 className="text-xl font-semibold">{experience.as}</h3>
