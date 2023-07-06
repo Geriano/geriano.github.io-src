@@ -131,7 +131,7 @@ export default function App() {
               <div className="w-4 h-4">
                 <LinkedinIcon />
               </div>
-              <a href='https://www.linkedin.com/in/gerznewbie'>gerznewbie</a>
+              <a href='https://www.linkedin.com/in/geriano-adika-putra'>Geriano</a>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4">
