@@ -65,6 +65,7 @@ const experiences = [
     range: '05/2023 - Present',
     tasks: [
       'develop warehouse management system',
+      'enterprise resource planning integration',
     ],
   },
 ]
@@ -90,18 +91,38 @@ const projects = [
     desc: 'develop frontend nft web app',
     points: [],
   },
+  {
+    desc: 'develop mini database system - idk i got client from fiver in taiwan',
+    points: [],
+  },
+  {
+    desc: 'develop spotify ripper',
+    points: [
+      'download spotify playlist with metadata and output file as ogg',
+    ],
+  },
+  {
+    desc: 'develop trading orderbook system',
+    points: [
+      'develop system with websocket',
+      'implement for multithread',
+    ],
+  },
 ]
 
 const skills = [
-  'Dart', 'Flutter', 'NodeJS', 'AdonisJS', 'ExpressJS', 'Python', 'Flask', 'Odoo',
+  'Rust', 'Actix', 'Axum', 'Rocket', 'Tokio', 'Java', 'Quarkus', 'Spring', 'Dart', 'Flutter', 'NodeJS', 'AdonisJS', 'ExpressJS', 'Python', 'Flask', 'Odoo',
   'PHP', 'Laravel', 'Lumen', 'CodeIgniter', 'React', 'Redux', 'Typescript', 'Javascript', 'Vue', 'VueX',
   'Postgresql', 'MySQL', 'SQLite3', 'OracleDB', 'Git', 'Docker', 'Shell', 'Tailwindcss', 'Bootstrap',
   'Apache', 'Websocket',
 ]
 
 const interests = [
-  'Rust', 'Golang', 'MongoDB', 'Artificial Intelegent', 'Neural Network', 'Blockchain', 'Data Analyst',
+  'Artificial Intelegence', 'Neural Network', 'Blockchain', 'Data Analyst',
 ]
+
+experiences.reverse()
+projects.reverse()
 
 export default function App() {
   return (
@@ -187,7 +208,7 @@ export default function App() {
 
           <div className="flex-wrap">
             {skills.map(skill => (
-              <button key={skill} className="text-white font-semibold text-center bg-slate-600 px-2 py-1 rounded-md mr-2 mb-2">{skill}</button>
+              <button key={skill} className="text-white font-semibold text-center bg-slate-600 px-2 py-1 rounded-md mr-2 mb-2" style={{ pageBreakAfter: 'auto' }}>{skill}</button>
             ))}
           </div>
 
