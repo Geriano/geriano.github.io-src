@@ -62,7 +62,7 @@ const experiences = [
   {
     as: 'Backend Developer',
     org: 'Legit Group - Ismaya Group',
-    range: '05/2023 - Present',
+    range: '05/2023 - 02/2024',
     tasks: [
       'develop warehouse management system',
       'enterprise resource planning integration',
@@ -118,7 +118,7 @@ const skills = [
 ]
 
 const interests = [
-  'Artificial Intelegence', 'Neural Network', 'Blockchain', 'Data Analyst',
+  'Artificial Intelegence', 'Neural Network', 'Blockchain', 'Solana', 'Data Analyst',
 ]
 
 experiences.reverse()
@@ -146,7 +146,7 @@ export default function App() {
               <div className="w-4 h-4">
                 <MailIcon />
               </div>
-              <p>gerianoadikaputra@gmail.com</p>
+              <a href="mailto:me@geriano.cloud">me@geriano.cloud</a>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4">
@@ -164,7 +164,7 @@ export default function App() {
               <div className="w-4 h-4">
                 <BrowserIcon />
               </div>
-              <a href='https://geriano.github.io'>geriano.github.io</a>
+              <a href='https://geriano.cloud'>geriano.cloud</a>
             </div>
           </div>
         </div>
