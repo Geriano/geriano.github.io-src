@@ -68,6 +68,15 @@ const experiences = [
       'enterprise resource planning integration',
     ],
   },
+  {
+    as: 'Blockchain dev',
+    org: 'Lokamining',
+    range: '01/2024 - now',
+    tasks: [
+      'develop bitcoin mining pool on $ICP',
+      'develop bitcoin stratum network',
+    ],
+  },
 ]
 
 const projects = [
