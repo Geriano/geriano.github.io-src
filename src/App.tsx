@@ -31,7 +31,7 @@ const experiences = [
   {
     as: 'Product Owner & Fullstack Developer',
     org: 'PT Quadra Karya Santosa',
-    range: '09/2020 - Present',
+    range: '09/2021 - 02/2024',
     tasks: [
       'develop company profile',
       'upgrading human resource system for telkom education foundation',
@@ -45,7 +45,7 @@ const experiences = [
   {
     as: 'Fullstack Web & Mobile developer',
     org: 'PT Laju Omega Digital',
-    range: '10/2022 - 05/2023',
+    range: '10/2022 - 01/2024',
     tasks: [
       'develop company profile for jaddi, hira, jellifish, world health organization, indomina, anugrah teknologi indonesia, and more',
       'develop social media web app and leading to build mobile app',
@@ -75,6 +75,7 @@ const experiences = [
     tasks: [
       'develop bitcoin mining pool on $ICP',
       'develop bitcoin stratum network',
+      'develop canister smart contract on $ICP chain',
     ],
   },
 ]
