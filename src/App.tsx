@@ -76,6 +76,7 @@ const experiences = [
       'develop bitcoin mining pool on $ICP',
       'develop bitcoin stratum network',
       'develop canister smart contract on $ICP chain',
+      'develop solana automation trading and token holder',
     ],
   },
 ]
