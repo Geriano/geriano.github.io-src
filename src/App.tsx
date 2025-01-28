@@ -141,9 +141,9 @@ export default function App() {
       <header className="flex flex-col">
         <div className="flex flex-col md:flex-row items-center md:justify-between bg-slate-700 px-10 md:px-20 print:px-6 py-6 print:py-2">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-white text-5xl font-semibold">Geriano Adika Putra</h1>
-            <h3 className="text-cyan-500 text-xl font-medium">Product Owner, Fullstack Web & Mobile Developer</h3>
-            <p className="text-white">I'm Weaboo</p>
+            <h1 className="text-white text-5xl font-semibold">Geriano</h1>
+            <h3 className="text-cyan-500 text-xl font-medium">Blockchain, Web3, Web2</h3>
+            <p className="text-white">I'm a tech chick, without tech i'm just a chick</p>
           </div>
 
           <div className="flex-none p-4">
@@ -157,7 +157,7 @@ export default function App() {
               <div className="w-4 h-4">
                 <MailIcon />
               </div>
-              <a href="mailto:me@geriano.cloud">me@geriano.cloud</a>
+              <a href="mailto:geriano@nusantara.network">geriano@nusantara.network</a>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4">
@@ -175,7 +175,7 @@ export default function App() {
               <div className="w-4 h-4">
                 <BrowserIcon />
               </div>
-              <a href='https://geriano.cloud'>geriano.cloud</a>
+              <a href='https://geriano.nusantara.network'>geriano.nusantara.network</a>
             </div>
           </div>
         </div>
